@@ -11,16 +11,22 @@ namespace mencoba_csharp_2
     {
         static void Main(string[] args)
         {
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
-            int Jumlah = kali(a, b);
-            Console.WriteLine($"hasil kali dari {a} dan {b} adalah {Jumlah}");
+            int Jumlah = tambah();
+            Console.WriteLine(Jumlah);
+            Jumlah = tambah(b: 20, a: 5);
+            Console.WriteLine(Jumlah);
+            Jumlah = tambah(10, 10);
+            Console.WriteLine(Jumlah);
             Console.ReadLine();
         }
         static int kali(int a, int b)
         {
             int Jumlah = a * b;
             return Jumlah;
+        }
+        static int tambah(int a = 5, int b = 10 ) 
+        {
+            return a + b;
         }
 
     }
