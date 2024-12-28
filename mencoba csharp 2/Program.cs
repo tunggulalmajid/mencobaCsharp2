@@ -11,12 +11,15 @@ namespace mencoba_csharp_2
     {
         static void Main(string[] args)
         {
-            int Jumlah = tambah();
-            Console.WriteLine(Jumlah);
-            Jumlah = tambah(b: 20, a: 5);
-            Console.WriteLine(Jumlah);
-            Jumlah = tambah(10, 10);
-            Console.WriteLine(Jumlah);
+            //int Jumlah = tambah();
+            //Console.WriteLine(Jumlah);
+            //Jumlah = tambah(b: 20, a: 5);
+            //Console.WriteLine(Jumlah);
+
+            
+            Console.WriteLine(tambah("a", "b"));
+            Console.WriteLine(tambah(2.1, 10.4));
+            Console.WriteLine(tambah(2, 10));
             Console.ReadLine();
         }
         static int kali(int a, int b)
@@ -29,5 +32,14 @@ namespace mencoba_csharp_2
             return a + b;
         }
 
+        /* method overloading, method yang bisa digunakan untuk tipedata yang berbeda */
+        static double tambah(double a, double b) 
+        { 
+            return a + b;
+        }
+        static string tambah(string a, string b)
+        {
+            return a + b;
+        }
     }
 }
